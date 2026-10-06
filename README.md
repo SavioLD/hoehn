@@ -4,9 +4,13 @@ Conversion-optimierte Karriere-Landingpage (Ad-Funnel) für zwei Stellen als
 **CNC-Einrichter (m/w/d)** am Standort Rosenfeld. Aufbau und Sektionsstruktur
 1:1 nach dem Vorbild der ALWA-Karriereseite, Texte und CI auf HÖHN angepasst.
 
-Arbeitgeber ist die **FLURO-Gelenklager GmbH & Martin Höhn GmbH**; nach außen
-führt die Marke **HÖHN Präzisionsteile** (geliefertes Logo). Der vollständige
-Firmenname steht in Footer, Einwilligungstext, FAQ und den strukturierten Daten.
+Nach außen führt die Marke **HÖHN Präzisionsteile** (geliefertes Logo), als
+Firmenname steht überall **Martin Höhn GmbH**.
+
+Die Seite nennt und verlinkt **FLURO nirgends** – weder im Text, noch im
+Footer, noch in den strukturierten Daten. Einziger verbleibender Treffer ist
+die Adresse der Seite selbst (`saviold.github.io/fluro/`), die aus dem
+Repository-Namen stammt; siehe „Offene Punkte".
 
 Die Seite ist eine einzige Datei: **`index.html`** (HTML, CSS und JS inline,
 keine Build-Tools, keine Abhängigkeiten außer Google Fonts).
@@ -223,10 +227,26 @@ dem Bildschirm **exakt identisch** – auch bei 320 px Displaybreite.
 
 ## 8. Offene Punkte
 
-* **Impressum / Datenschutz** verlinken aktuell auf `https://fluro.de/de`.
-  Sobald die genauen URLs bekannt sind, im Footer (2 ×) und im
-  Einwilligungstext (1 ×) eintragen. Ich wollte keine Pfade raten und 404er
-  auf Pflichtlinks riskieren.
+* **Impressum / Datenschutz / Website**: stehen im Footer aktuell als reiner
+  Text ohne Verlinkung, damit nirgends ein falsches Ziel verlinkt wird. Sobald
+  die Adressen vorliegen, genügt **eine** Stelle: das Objekt `LINKS` ganz oben
+  im Script.
+
+  ```js
+  var LINKS = { website:"", impressum:"", datenschutz:"" };
+  ```
+
+  Footer, Einwilligungstext, die Kontaktzeile unter dem Formular und die
+  strukturierten Daten ziehen dann automatisch nach.
+* **Firmenname**: Im ursprünglichen Auftrag stand als Arbeitgeber die
+  Kombination „FLURO-Gelenklager GmbH & Martin Höhn GmbH". Nach dem Entfernen
+  von FLURO nennt die Seite nur noch die **Martin Höhn GmbH** – unter anderem
+  im Einwilligungstext als Verantwortliche für die Datenverarbeitung. Bitte
+  kurz bestätigen, dass das die richtige Gesellschaft ist.
+* **Repository-Name**: Das Repo heißt `fluro`, deshalb enthält die öffentliche
+  Adresse `saviold.github.io/fluro/` weiterhin das Wort. Ein Umbenennen des
+  Repos ändert die Live-URL und damit alle Anzeigen-Links – auf Zuruf
+  jederzeit machbar.
 * **Kontaktdaten**: Es wurden bewusst keine Telefonnummer und keine
   E-Mail-Adresse erfunden. Sobald eine Recruiting-Adresse vorliegt, kann sie
   im Footer und unter dem Formular ergänzt werden.

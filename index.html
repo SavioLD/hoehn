@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>Karriere bei HÖHN · CNC-Einrichter (m/w/d) in Rosenfeld</title>
-<meta name="description" content="HÖHN Präzisionsteile – FLURO-Gelenklager GmbH &amp; Martin Höhn GmbH in Rosenfeld – sucht CNC-Einrichter (m/w/d) für Serien- und Einzelteilfertigung. Star-Langdreher mit Fanuc, Traub TNA400. 13. Gehalt, 30 Tage Urlaub, unbefristet. Jetzt in unter 60 Sekunden bewerben – ohne Lebenslauf." />
+<meta name="description" content="HÖHN Präzisionsteile in Rosenfeld sucht CNC-Einrichter (m/w/d) für Serien- und Einzelteilfertigung. Star-Langdreher mit Fanuc, Traub TNA400. 13. Gehalt, 30 Tage Urlaub, unbefristet. Jetzt in unter 60 Sekunden bewerben – ohne Lebenslauf." />
 <meta name="robots" content="index, follow, max-image-preview:large" />
 <meta name="theme-color" content="#10212e" />
 <meta name="geo.region" content="DE-BW" />
@@ -578,11 +578,11 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d7d9dd}
           <div class="field"><label for="telefon">Telefonnummer *</label><input id="telefon" name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="z. B. 0151 23456789" required /></div>
           <div class="field"><label for="email">E-Mail *</label><input id="email" name="email" type="email" autocomplete="email" placeholder="z. B. max@beispiel.de" required /></div>
           <p class="consent">
-            Mit dem Absenden willige ich ein, dass die FLURO-Gelenklager GmbH &amp; Martin Höhn GmbH meine Daten zur Bearbeitung
+            Mit dem Absenden willige ich ein, dass die Martin Höhn GmbH meine Daten zur Bearbeitung
             meiner Bewerbung verarbeitet (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;a DSGVO) – vertraulich und ohne Weitergabe an unbefugte Dritte.
-            <a href="https://fluro.de/de" target="_blank" rel="noopener">Datenschutz</a>
+            <span id="consentDatenschutz"></span>
           </p>
-          <div class="form-error" id="formError">Das hat leider nicht geklappt. Bitte versuche es noch einmal – oder nimm direkt über <strong>fluro.de</strong> Kontakt zu uns auf.</div>
+          <div class="form-error" id="formError">Das hat leider nicht geklappt. Bitte prüfe kurz deine Internetverbindung und versuche es noch einmal.</div>
         </div>
 
         <!-- ---------- ERFOLG ---------- -->
@@ -606,9 +606,9 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d7d9dd}
       </form>
     </div>
 
-    <p class="apply__contact">
+    <p class="apply__contact" id="applyContact" hidden>
       Lieber direkt Kontakt aufnehmen oder Fragen zur Bewerbung?
-      <a href="https://fluro.de/de" target="_blank" rel="noopener">fluro.de</a>
+      <span id="applyContactLink"></span>
     </p>
   </div>
 </section>
@@ -627,7 +627,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d7d9dd}
       <details><summary>Sind die Stellen befristet?</summary><div class="faq__a">Nein. Beide Stellen sind unbefristete Festanstellungen in Vollzeit am Standort Rosenfeld. Die Probezeit beträgt sechs Monate.</div></details>
       <details><summary>An welchen Maschinen arbeite ich?</summary><div class="faq__a">In der Serienfertigung an Star-Langdrehern mit Fanuc-Steuerung. In der Einzelteilfertigung an CNC-Drehmaschinen vom Typ TNA400 mit Traub-Steuerung TX8i, bei Losgrößen zwischen 5 und 100 Stück.</div></details>
       <details><summary>Wie schnell bekomme ich eine Rückmeldung?</summary><div class="faq__a">Wir melden uns persönlich und schnell – in der Regel telefonisch für ein kurzes, lockeres Erstgespräch.</div></details>
-      <details><summary>Wer sieht meine Daten?</summary><div class="faq__a">Nur die für das Recruiting zuständigen Personen bei der FLURO-Gelenklager GmbH &amp; Martin Höhn GmbH. Deine Daten werden gemäß Art. 6 Abs. 1 lit. a DSGVO ausschließlich zur Bearbeitung deiner Bewerbung verwendet.</div></details>
+      <details><summary>Wer sieht meine Daten?</summary><div class="faq__a">Nur die für das Recruiting zuständigen Personen bei der Martin Höhn GmbH. Deine Daten werden gemäß Art. 6 Abs. 1 lit. a DSGVO ausschließlich zur Bearbeitung deiner Bewerbung verwendet.</div></details>
     </div>
   </div>
 </section>
@@ -639,26 +639,25 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d7d9dd}
       <div class="footer__col footer__brand">
         <img id="logoFooter" alt="HÖHN Präzisionsteile" />
         <b>HÖHN</b><span class="brand__sub" style="display:block;letter-spacing:.14em;text-transform:uppercase;font-weight:800">Präzisionsteile &middot; Rosenfeld</span>
-        <p>HÖHN Präzisionsteile · FLURO-Gelenklager GmbH &amp; Martin Höhn GmbH · Rosenfeld · Präzisionsdrehteile, Gelenklager und Gelenkköpfe aus eigener Fertigung.</p>
+        <p>HÖHN Präzisionsteile · Martin Höhn GmbH · Rosenfeld · Präzisionsdrehteile, Gelenklager und Gelenkköpfe aus eigener Fertigung.</p>
       </div>
       <div class="footer__col">
         <b>Kontakt</b>
         <ul>
           <li>72348 Rosenfeld · Baden-Württemberg</li>
-          <li><a href="https://fluro.de/de" target="_blank" rel="noopener">fluro.de</a></li>
+          <li id="footerWebsite" hidden></li>
         </ul>
       </div>
       <div class="footer__col">
         <b>Rechtliches</b>
         <ul>
-          <li><a href="https://fluro.de/de" target="_blank" rel="noopener">Impressum</a></li>
-          <li><a href="https://fluro.de/de" target="_blank" rel="noopener">Datenschutz</a></li>
-          <li><a href="https://fluro.de/de" target="_blank" rel="noopener">fluro.de</a></li>
+          <li id="lnkImpressum">Impressum</li>
+          <li id="lnkDatenschutz">Datenschutz</li>
         </ul>
       </div>
     </div>
     <div class="footer__legal">
-      <span>© 2026 FLURO-Gelenklager GmbH &amp; Martin Höhn GmbH – Alle Rechte vorbehalten.</span>
+      <span>© 2026 Martin Höhn GmbH – Alle Rechte vorbehalten.</span>
       <span>Karriereseite von <a href="https://www.laendle-digital.com" target="_blank" rel="noopener">Ländle Digital</a></span>
     </div>
   </div>
@@ -667,6 +666,53 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d7d9dd}
 <script>
 (function(){
   "use strict";
+
+  /* =====================================================================
+     RECHTLICHE LINKS UND WEBSITE
+     Eine einzige Stelle für Impressum, Datenschutz und Website.
+     Solange ein Feld leer ist, erscheint der Eintrag im Footer als reiner
+     Text OHNE Verlinkung – es zeigt also nirgends ein Link auf ein
+     fremdes oder falsches Ziel. Sobald die Adressen vorliegen, hier
+     eintragen; Footer, Einwilligungstext, Kontaktzeile unter dem Formular
+     und die strukturierten Daten ziehen automatisch nach.
+     ===================================================================== */
+  var LINKS = {
+    website:     "",
+    impressum:   "",
+    datenschutz: ""
+  };
+
+  function org(){
+    var o = {"@type":"Organization", name:"Martin Höhn GmbH"};
+    if (LINKS.website) o.sameAs = LINKS.website;
+    return o;
+  }
+
+  /* Links aus LINKS aufbauen. Ohne hinterlegte Adresse bleibt der Eintrag
+     unverlinkter Text, statt ins Leere oder woandershin zu zeigen. */
+  (function(){
+    function link(url, text){
+      return '<a href="' + esc(url) + '" target="_blank" rel="noopener">' + esc(text) + '</a>';
+    }
+    function setze(id, url, text){
+      var el = document.getElementById(id); if (!el) return;
+      if (url) el.innerHTML = link(url, text); else el.textContent = text;
+    }
+    setze("lnkImpressum",   LINKS.impressum,   "Impressum");
+    setze("lnkDatenschutz", LINKS.datenschutz, "Datenschutz");
+
+    var ds = document.getElementById("consentDatenschutz");
+    if (ds && LINKS.datenschutz) ds.innerHTML = link(LINKS.datenschutz, "Datenschutz");
+
+    if (LINKS.website){
+      var kurz = LINKS.website.replace(/^https?:\/\//, "").replace(/\/+$/, "");
+      var fw = document.getElementById("footerWebsite");
+      if (fw){ fw.innerHTML = link(LINKS.website, kurz); fw.hidden = false; }
+      var al = document.getElementById("applyContactLink"),
+          ac = document.getElementById("applyContact");
+      if (al && ac){ al.innerHTML = link(LINKS.website, kurz); ac.hidden = false; }
+    }
+  })();
 
   /* =====================================================================
      LEAD TABLE
@@ -867,7 +913,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d7d9dd}
         "@type":"JobPosting", title:j.title,
         description:j.aufgaben.join(". ")+".",
         datePosted:today, validThrough:through, employmentType:"FULL_TIME",
-        hiringOrganization:{"@type":"Organization",name:"FLURO-Gelenklager GmbH & Martin Höhn GmbH",sameAs:"https://fluro.de/de"},
+        hiringOrganization:org(),
         jobLocation:{"@type":"Place",address:{"@type":"PostalAddress",addressLocality:"Rosenfeld",postalCode:"72348",addressRegion:"BW",addressCountry:"DE"}},
         qualifications:j.must.join(". ")+".",
         jobBenefits:RAHMEN.join(", "),
